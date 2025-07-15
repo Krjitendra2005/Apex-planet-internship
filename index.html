@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic Webpage</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Styling and JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Basic Webpage</h1>
-    </header>
+  <h1>Advanced JavaScript Projects</h1>
 
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This is a simple webpage created to demonstrate basic HTML, CSS, and JavaScript concepts as outlined in the "Basics of Web Development" guide.</p>
-            <p>You'll see headings, paragraphs, and an image below. We've also applied some styling using CSS.</p>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-NFmiJPjIoJ6_4y7I-gwZo5dTD41GRMYFKQ&s" alt="Placeholder image for web development">
-            <p>For more information, visit <a href="https://www.official@apexplanet.in">apexplanet</a> (this is a link).</p>
-        </section>
+  <div class="content-wrapper">
+    <section id="quiz-section">
+      <h2>Interactive Quiz</h2>
+      <p id="question"></p>
+      <div id="quiz-buttons">
+        <button onclick="checkAnswer(true)">True</button>
+        <button onclick="checkAnswer(false)">False</button>
+      </div>
+      <p id="feedback"></p>
+      <p>Score: <span id="score">0</span> / <span id="total-questions"></span></p>
+      <p>Note :- For Every correct answer your score will be +1</p>
+      <button id="restart-quiz-btn" style="display:none;" onclick="restartQuiz()">Restart Quiz</button>
+    </section>
 
-        <section>
-            <h2>Interactive Section</h2>
-            <p>Click the button below to see a basic JavaScript interaction:</p>
-            <button id="alertButton">Click Me!</button>
-        </section>
-    </main>
+    <section id="carousel-section">
+      <h2>Image Carousel</h2>
+      <img id="carousel-img" src="" alt="Carousel Image" />
+      <p id="image-caption"></p>
+      <br />
+      <button onclick="prevImage()">Previous</button>
+      <button onclick="nextImage()">Next</button>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Basic Webpage</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <section id="api-section">
+      <h2>Fetch a Joke</h2>
+      <button onclick="getJoke()">Get Joke</button>
+      <p id="joke-loading" style="display:none;">Loading joke...</p>
+      <p id="joke"></p>
+      <p id="joke-error" style="display:none; color: red;">Failed to fetch joke. Please try again.</p>
+    </section>
+  </div> <script src="script.js"></script>
 </body>
 </html>
